@@ -1,0 +1,109 @@
+Requirements Test Cases (Updated test cases - Co-owner)
+
+1. Create requirement from tree & page view.
+2. Any project member can able to update requirement title and type from tree & page view.
+3. Only requirement version owner can able to update version status.
+4. Only requirement version owner/contributors can add/remove Tags from version.
+5. Requirement version owner/contributors are able to update requirement priority.
+6. Requirement version owner/contributors can able to add contributors and reviewers into version.
+7. Requirement version contributors can able to add contributors and reviewers into version.
+8. Requirement version owner and contributors can able to remove contributors and reviewers from version.
+9. All project members able to add comments into requirement version.
+10. All project members  can able to reply comments
+11. User who added the comment can able to edit and delete his/her own comment.
+12. Project owner can change the version owner.
+13. Requirement version owner can change the version owner.
+14. After changing the version owner, previous owner gets added into co-owner list.
+15. Only requirement version owner and contributors can add the attachments to version.
+16. Only requirement version owner and contributors can delete the attachment from version.
+17. All project members can download the attachments from version.
+18. Any project members can add time entry into version.
+19. All project members can link tasks to version.
+20. All project members can add new tasks to version.
+21. All project members can remove task from version.
+22. All project members can link bugs to version.
+23. All project members can add new bugs to version.
+24. All project members can remove bug from version.
+25. All project members can link test cases to version.
+26. All project members can add new test cases to version.
+27. All project members can remove test case from version.
+28. Only requirement version owner and contributors can edit description.
+29. Only requirement version owner and contributors can add/edit estimate hours of description.
+30. Reviewer can’t add attachment.
+31. Reviewer can’t remove attachment.
+32. Reviewer can Accept the requirement version.
+33. Reviewer can send the request for requirement change.
+34. Reviewer can put the requirement version to Under review. 
+35. Only requirement version owner can change the version status. (Draft -> Put on hold, Draft -> Final, Reviewed -> Draft, Reviewed -> Final, CR -> Draft etc..)
+36. Any project member can able to delete requirement.
+37. Requirement can be deleted only when it has single version and whose status is not Final.
+38. Any project member can able to derived new version from final version.
+39. In Enhancement requests tab, any project member can able to add enhancement requests.
+40. In Enhancement requests tab, any project member can able to delete enhancement requests.
+41. Any user can able to include ER into derived version.
+42. Any user can remove ER from derived version only when version status is not final.
+43. Only requirement version owner and contributors can able to add/update Review date.
+44. In Upstream/Downstream tab, any project member can add upstream and downstream requirements and text document.
+45. Any project member can view traceability of requirement.
+46. Any project member can drag and drop the requirement to other requirement from tree view.
+47. Any project member can create new requirement by right clicking from tree panel requirement.
+48. Any project member can delete requirement by right clicking from tree panel requirement.
+49. User can be added as contributors and reviewers in requirement version.
+50. Requirement version owner should not be added as contributors and reviewers. (req. version owner name should not be appeared in contributors and reviewers potential list)
+51. User can be able to create requirement, Text Document, Folder and can be able to Import Requirements from Default page
+52. Contributors should get added when version status is Draft only
+53. Reviewers should get added when version status is Draft/Waiting for Review/Changes Requested/ Reviewed 
+54. Contributors should get removed when version status is Draft
+55. Reviewers should get removed until he/she didn’t review (means not change review status to Under review/Accept/Changes Requested)
+56. User who have view permission, Requirement owner try to make that user as requirement owner - an error message should shown
+57. Co-owner can able to add and remove contributors, reviewers and co-owners
+58. Co-owner should get added/removed in version when requirement version status is in Draft mode
+59. Requirement version co-owner can add/remove Tags from version.
+60. Requirement version co-owner can able to update requirement priority.
+61. Requirement version co-owner can able to add/delete requirement attachment.
+62. Description and Estimate hours should be edited when version status is Draft only
+63. Co-owner can edit the description 
+64. Co-owner can edit the estimate hours
+
+
+Group Actions Test Cases
+1. In Requirements tab, upon clicking on Group Action button, Group action wizard should get popup and Select Action dropdown button should be displayed.
+2. Upon clicking on Select Action dropdown, Send For Review, Add Contributors, Add Reviewers and Mark as Final actions should be shown
+3. Based on selected group action, user will view only those potential requirements which he has allowed to view as Owner, Contributor or Reviewer
+4. Send for review
+    1. Latest version of all requirements whose status is in Draft, Waiting for review, Changes Requested and Reviewed would appear in potential list to choose requirements for action.
+    2. Draft on hold and Final requirements should not appear in list.
+    3. Only requirement version owner can send the requirement for review.
+    4. Contributors, Reviewers and other project member should not able to send requirement for review.
+    5. While sending for review, owner can able to add reviewers 
+    6. At lease one reviewer is required to be selected.
+    7. Already added reviewers should not be added again.
+    8. If version status is Changes Requested or Waiting for review, and add a reviewer, version status should not change after sending for review
+    9. If version status is Reviewed, and add a reviewer, version status should change to Waiting for review after sending for review
+    10. In reviewers screen, only show those members who have Requirements permission
+    11. Requirement owner should not be shown in reviewers potential list.
+    12. Requirement owner is appear in reviewers potential list but not getting added as reviewer 
+5. Add Contributors 
+    1. Latest version of all requirements whose status is Draft only would appear in potential list to choose requirements for action.
+    2. Requirement version owner and contributors can able to add contributors.
+    3. At lease one contributor is required to be selected.
+    4. Already added contributors should not be added again.
+    5. In contributors screen, only show those members who have Requirements permission.
+    6. Requirement owner should not be shown in contributors potential list.
+    7. Requirement owner is appear in contributors potential list but not getting added as contributor 
+6. Add Reviewers 
+    1. Latest version of all requirements whose status is in Draft, Waiting for review, Changes Requested and Reviewed would appear in potential list to choose requirements for action.
+    2. Draft on hold and Final requirements should not appear in list.
+    3. Requirement version owner and contributors can able to add reviewers.
+    4. At lease one reviewer is required to be selected.
+    5. Already added reviewers should not be added again.
+    6. In reviewers screen, only show those members who have Requirements permission.
+    7. Requirement owner should not be shown in reviewers potential list.
+    8. If version status is Changes Requested or Waiting for review, and add a reviewer, version status should not change, after sending for review.
+    9. If version status is Reviewed, and add a reviewer, version status should change to Waiting for review, after sending for review.
+7. Mark As Final
+    1. Latest version of all root requirements whose status is in Draft, Reviewed would appear in potential list to choose requirements for given action.
+    2. Requirements whose status is Draft and in which reviewers are present as well, those requirements should not appear in the list for selection.
+    3. At lease one requirement is required to be selected
+    4. Once user selects requirements, Submit button would get enabled and user can make the selected requirements as Final.
+
